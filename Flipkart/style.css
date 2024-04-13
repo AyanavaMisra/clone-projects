@@ -209,11 +209,61 @@ nav div img {
 .login:hover .lgicn{
     filter: invert(1);
 }
+.login:hover .arrw{
+    transform: rotate(180deg);
+    transition: all .3s;
+}
 
 /* ---------------------------------main-------------------------- */
+
+
 main{
-    margin-bottom: auto
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.firstMenu{
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.firstMenu div{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px;
+}
+.firstMenu div img{
+    height: 64px;
+    width: 64px;
+    margin-bottom: 12px;
+}
+.firstMenu div p{
+    font-weight: 500;
+}
+.carousel{
+    width: 80%;
+}
+.slider{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+.slide{
+    position: absolute;
+    top: 0;
+}
+
+
 /* ---------------------------------footer------------------------ */
 footer{
     background-color: var(--footerColor);
