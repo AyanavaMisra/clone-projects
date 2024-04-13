@@ -12,6 +12,9 @@
     --shadow-allSide: 0 0 5px 2px rgb(0 0 0 / 0.1);
     --shadow-borderlike: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     --blue: #2a55e5;
+    --footerColor:#212121;
+    --footerHeadingColor:#878787;
+    --footerBorderColor:#454d5e;
 }
 
 * {
@@ -27,6 +30,7 @@ body {
     background-color: var(--backClr);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ----------------------navbar-------------------------------- */
@@ -35,7 +39,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 15px 50px;
+    padding: 15px 12%;
     box-shadow: var(--shadow-sm);
 }
 
@@ -53,7 +57,7 @@ nav div img {
     height: 2.5rem;
     background-color: var(--backClr);
     border-radius: 10px;
-    width: 40%;
+    width: 50%;
     background-color: var(--SrchClr);
 }
 
@@ -70,7 +74,7 @@ nav div img {
 }
 
 .search input {
-    width: 90%;
+    width: 100%;
     font-size: 18px;
     outline: transparent;
 }
@@ -207,11 +211,73 @@ nav div img {
 }
 
 /* ---------------------------------main-------------------------- */
-
+main{
+    margin-bottom: auto
+}
 /* ---------------------------------footer------------------------ */
 footer{
-    height: 20vh;
-    width: 100%;
-    background-color: black;
+    background-color: var(--footerColor);
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+.topPart{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    padding: 40px 60px 0;
+}
+.footerHeadings{
+    color: var(--footerHeadingColor);
+    font-size: 12px;
+    cursor: default;
+}
+.footerList{
+    color: white;
+    margin-top: 12px;
+    line-height: 18px;
+}
+.footerList a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none; 
+}
+.footerList a li{
+    font-weight: 600;
+}
+.footerList a:hover{
+    text-decoration: underline;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+.social p{
+    margin-bottom: 16px;
+}
+.social img{
+    margin-right: 16px;
+    height: 24px;
+}
+.brdr{
+    border-left: 1px solid var(--footerBorderColor);
+    padding-left: 32px;
+}
+.bottomPart{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    border-top: 1px solid var(--footerBorderColor);
+    padding: 25px 0;
+    margin-top: 40px;
+}
+.bottomPart div{
+    display: flex;
+    align-items: center;
+}
+.bottomPart div img{
+    margin-right: 10px;
 }
